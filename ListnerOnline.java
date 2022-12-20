@@ -57,6 +57,7 @@ public class ListnerOnline implements KeyListener,MouseListener
             this.cont.setMsg(""+(this.cont.gettab().getJoueur()[this.j].getPosX()));
             this.cont.repaint();
         }
+        
 
         if (e.getKeyCode() == KeyEvent.VK_RIGHT)
         {
@@ -114,6 +115,49 @@ public class ListnerOnline implements KeyListener,MouseListener
         {
             this.cont.gettab().getBalle().setpause(true);
             this.cont.setMsg(""+900000);
+        }
+
+        if (e.getKeyCode() == KeyEvent.VK_Q){
+            if(this.cont.gettab().getBalle().getPosY()>20 && this.cont.gettab().getBalle().getPosY()<50 && this.j==0)
+            {
+                this.cont.gettab().getBalle().setmoveB(-3);
+            }
+            if(this.cont.gettab().getBalle().getPosY()>690 && this.cont.gettab().getBalle().getPosY()<800 && this.j==1)
+            {
+                this.cont.gettab().getBalle().setmoveB(-3);
+            }
+            this.cont.setMsg(""+500000);
+            this.cont.repaint();
+
+        }
+        if (e.getKeyCode() == KeyEvent.VK_D){
+            if(this.cont.gettab().getBalle().getPosY()>20 && this.cont.gettab().getBalle().getPosY()<100 && this.j==0)
+            {
+                this.cont.gettab().getBalle().setmoveB(3);
+            }
+            if(this.cont.gettab().getBalle().getPosY()>650 && this.cont.gettab().getBalle().getPosY()<800 && this.j==1)
+            {
+                this.cont.gettab().getBalle().setmoveB(3);
+            }
+            this.cont.setMsg(""+600000);
+            this.cont.repaint();
+            
+        }
+        if (e.getKeyCode() == KeyEvent.VK_Z)
+        {
+
+            this.cont.gettab().getBalle().setpause(true);
+            if(this.cont.gettab().getBalle().getPosY()>650 && this.cont.gettab().getBalle().getPosY()<800 && this.j==1)
+            {
+                this.cont.gettab().getBalle().setmoveB(0);
+            }
+            if(this.cont.gettab().getBalle().getPosY()>20 && this.cont.gettab().getBalle().getPosY()<100 && this.j==0)
+            {
+                this.cont.gettab().getBalle().setmoveB(0);
+            }
+            this.cont.setMsg(""+700000);
+            this.cont.repaint();
+
         }
     }
 

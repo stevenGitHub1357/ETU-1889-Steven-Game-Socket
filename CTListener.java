@@ -37,7 +37,7 @@ public class CTListener implements KeyListener,MouseListener,ActionListener
         if(e.getSource() == this.ct.getHote()) {
             System.out.println("Cree partie");
             try {
-                Runtime.getRuntime().exec(new String[]{"cmd","/c","start","1-Moi.cmd","/k","java -jar \"","D:/ITU/S3/INF-203-Program Syst-(Mr Naina)/Jeux/\"",""});
+                Runtime.getRuntime().exec(new String[]{"cmd","/c","start","1-HoteSocket.cmd","/k","java -jar \"","D:/ITU/S3/INF-203-Program Syst-(Mr Naina)/Jeux/\"",""});
             } catch (Exception ex) {
                 ex.getMessage();
                 ex.getStackTrace();
@@ -48,7 +48,7 @@ public class CTListener implements KeyListener,MouseListener,ActionListener
         if(e.getSource() == this.ct.getRejoindre()){
             System.out.println("rejoindre");
             try {
-                Runtime.getRuntime().exec(new String[]{"cmd","/c","start","2-Toi.cmd","/k","java -jar \"","D:/ITU/S3/INF-203-Program Syst-(Mr Naina)/Jeux/\"",""}); 
+                Runtime.getRuntime().exec(new String[]{"cmd","/c","start","2-JoueurSocket.cmd","/k","java -jar \"","D:/ITU/S3/INF-203-Program Syst-(Mr Naina)/Jeux/\"",""}); 
             } catch (Exception ex) {
                 ex.getMessage();
                 ex.getStackTrace();
